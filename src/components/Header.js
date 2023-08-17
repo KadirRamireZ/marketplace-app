@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
-import { DataContext } from "../context/DataProvider";
 import { Link } from "react-router-dom";
+import { DataContext } from "../context/DataProvider";
 import Nike from "../images/Nike.png";
 
 export const Header = () => {
@@ -13,23 +13,31 @@ export const Header = () => {
   };
 
   return (
-    <header>
-      <div className="menu">
-        <box-icon name="menu"></box-icon>
+    <header className="header-container">
+      {" "}
+      
+      <div className="menu" onClick={toogleMenu}>
+        <div className="menu-line"></div>
+        <div className="menu-line"></div>
+        <div className="menu-line"></div>
       </div>
-      <Link to="/">
+      <Link to="/" className="logo-link">
         <div className="logo">
           <img src={Nike} alt="Nike" width="150" />
         </div>
       </Link>
-      <ul>
-        <li>
-          <Link to="/">INICIO</Link>
-        </li>
-        <li>
-          <Link to="/productos">PRODUCTOS</Link>
-        </li>
-      </ul>
+      <nav className="nav-links">
+        {" "}
+        {/* Agrega una lista de navegación */}
+        <ul>
+          <li>
+            <Link to="/">INICIO</Link>
+          </li>
+          <li>
+            <Link to="/productos">PRODUCTOS</Link>
+          </li>
+        </ul>
+      </nav>
       <div className="cart" onClick={toogleMenu}>
         <box-icon name="cart"></box-icon>
         <span className="item__total"> {carrito.length} </span>
