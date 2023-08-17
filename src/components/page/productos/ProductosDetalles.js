@@ -14,7 +14,6 @@ export const ProductosDetalles = () => {
   let item = 0;
 
   useEffect(() => {
- 
     item = 0;
     productos.forEach((producto) => {
       if (producto.id === parseInt(params.id)) {
@@ -24,7 +23,7 @@ export const ProductosDetalles = () => {
     });
   }, [params.id, productos]);
 
-  
+  console.log(url);
 
   useEffect(() => {
     const values = `${detalle.img1}${url}${detalle.img2}`;
@@ -43,9 +42,8 @@ export const ProductosDetalles = () => {
       {
         <div className="detalles">
           <h2>{detalle.title}</h2>
-          <br></br> <br></br> 
+          <br></br> <br></br>
           <p className="price">${detalle.price}</p>
-          
           <div className="grid">
             <p className="nuevo">Nuevo</p>
             <div className="tamano">
@@ -65,20 +63,21 @@ export const ProductosDetalles = () => {
           <button onClick={() => addCarrito(detalle.id)}>
             Añadir al carrito
           </button>
-
-          {url ? (
-            <img src={images} alt={detalle.title} />
-          ) : (
-            <img src={detalle.image} alt={detalle.title} />
-          )}
-          <input
+          <br></br>
+          <br></br>
+{/*           
+          <img src={images} alt={images}/> */}
+          <img src={detalle.image} alt={detalle.title} />
+          {/* <input
             type="range"
             min="1"
             max="36"
             step="1"
             value={url}
             onChange={handleInput}
-          />
+          /> */}
+          <br></br>
+          <br></br>
           <div className="description">
             <p>
               <b>description: </b> Lorem ipsum dolor, sit amet consectetur
@@ -99,6 +98,8 @@ export const ProductosDetalles = () => {
         </div>
       }
       <h2 className="relacionados">Productos relacionados</h2>
+      <br></br>
+      <br></br>
       <div className="productos">
         {productos.map((producto) => {
           if (item < 6 && detalle.category === producto.category) {

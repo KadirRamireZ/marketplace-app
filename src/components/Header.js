@@ -15,7 +15,6 @@ export const Header = () => {
   return (
     <header className="header-container">
       {" "}
-      
       <div className="menu" onClick={toogleMenu}>
         <div className="menu-line"></div>
         <div className="menu-line"></div>
@@ -35,6 +34,9 @@ export const Header = () => {
           </li>
           <li>
             <Link to="/productos">PRODUCTOS</Link>
+          </li>
+          <li>
+            <Link to="/agregarproducto">AGREGAR</Link>
           </li>
         </ul>
       </nav>

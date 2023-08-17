@@ -41,7 +41,6 @@ code {
 
 /* ----------------- HEADER -------------------*/
 .nikebarra {
-
   justify-content: center;
   width: 100%;
 }
@@ -428,8 +427,6 @@ header ul li a {
 .detalles img {
   min-height: 300px;
   object-fit: contain;
-  margin-top: -7rem;
-  z-index: -1;
 }
 .detalles input {
   max-width: 700px;
@@ -464,6 +461,45 @@ header ul li a {
   letter-spacing: 3px;
   text-transform: uppercase;
   font-family: Helvetica, sans-serif;
+}
+
+/*--------------FORM-------------*/
+
+.agregar-producto-form {
+  background: linear-gradient(#fffd00, #e97200, #ffffff);
+  text-align: center;
+}
+
+.agregar-producto-form input {
+  cursor: pointer;
+  width: 180px;
+  padding: 3px 10px;
+  border: 1px solid #f6f6f6;
+  border-radius: 3px;
+  background-color: #f6f6f6;
+  margin: 8px 0;
+  display: inline-block;
+}
+
+.agregar-producto-form label {
+  color: white;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.agregar-producto-form h2 {
+  color: white;
+  font-size: 50px;
+}
+
+.agregar-producto-form button {
+  width: 80%;
+  text-align: center;
+  margin-bottom: 5px;
+  border: none;
+  color: rgb(0, 0, 0);
+  padding: 14px 28px;
+  cursor: pointer;
+  border-radius: 5px;
 }
 
 /* -------------MEDIA -------------*/

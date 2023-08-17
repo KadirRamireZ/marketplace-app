@@ -9,8 +9,6 @@ export const DataProvider = (props) => {
   const [carrito, setCarrito] = useState([]);
   const [total, setTotal] = useState(0);
 
-  console.log(carrito);
-
   useEffect(() => {
     const producto = Data.items;
     if (producto) {
@@ -54,13 +52,20 @@ export const DataProvider = (props) => {
     getTotal();
   }, [carrito]);
 
+  const addProducto = (nuevoProducto) => {
+    setProductos([...productos, nuevoProducto]);
+  };
+
   const value = {
     productos: [productos],
     menu: [menu, setMenu],
     carrito: [carrito, setCarrito],
     addCarrito: addCarrito,
+    productos: [productos],
+    addProducto: addProducto,
     total: [total, setTotal],
   };
+
   return (
     <DataContext.Provider value={value}>{props.children}</DataContext.Provider>
   );
