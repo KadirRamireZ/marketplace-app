@@ -502,6 +502,10 @@ header ul li a {
   border-radius: 5px;
 }
 
+.imgform {
+  width: 100%;
+}
+
 /* -------------MEDIA -------------*/
 @media only screen and (max-width: 1000px) {
   .carrito__item {
