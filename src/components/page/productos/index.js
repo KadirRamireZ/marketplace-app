@@ -15,7 +15,7 @@ export const ProductosList = () => {
       <br></br>
       <img
         className="nikebarra"
-        src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/def22197634807.5ec9d1a8bb14f.gif"
+        src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/4cf83297411155.5ec51ded3d992.gif"
       />
       <div className="productos">
         {productos.map((producto) => (
