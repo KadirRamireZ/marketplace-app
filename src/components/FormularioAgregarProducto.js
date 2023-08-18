@@ -27,29 +27,29 @@ export const AgregarProductoForm = () => {
       />
       <div className="agregar-producto-form">
         <br></br> <br></br>
-        <h2>Nuevo Producto</h2>
+        <h2>New Product</h2>
         <br></br> <br></br>
         <form onSubmit={handleSubmit(onSubmit)}>
-          <label>Nombre del Producto</label>
+          <label>Product name</label>
           <br></br>
           <input {...register("nombre", { required: true })} />
           <br></br>
           <br></br>
-          <label>Precio</label>
+          <label>price</label>
           <br></br>
           <input
             {...register("precio", { required: true, pattern: /^[0-9.]+$/ })}
           />
           <br></br>
           <br></br>
-          <label>Imagen URL</label>
+          <label>URL image</label>
           <br></br>
           <input {...register("imagen", { required: true })} />
           <br></br>
           <br></br>
           <br></br>
           <br></br>
-          <button type="submit">Agregar Producto</button>
+          <button type="submit">Add Product</button>
           <br></br> <br></br> <br></br>
         </form>
       </div>

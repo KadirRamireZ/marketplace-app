@@ -45,7 +45,7 @@ export const ProductosDetalles = () => {
           <br></br> <br></br>
           <p className="price">${detalle.price}</p>
           <div className="grid">
-            <p className="nuevo">Nuevo</p>
+            <p className="nuevo">New</p>
             <div className="tamano">
               <select placeholder="Tamaño">
                 <option value="1">1</option>
@@ -57,15 +57,13 @@ export const ProductosDetalles = () => {
                 <option value="1">7</option>
                 <option value="1">8</option>
               </select>
-              <p>Tamaño</p>
+              <p>size</p>
             </div>
           </div>
-          <button onClick={() => addCarrito(detalle.id)}>
-            Añadir al carrito
-          </button>
+          <button onClick={() => addCarrito(detalle.id)}>add to cart</button>
           <br></br>
           <br></br>
-{/*           
+          {/*           
           <img src={images} alt={images}/> */}
           <img src={detalle.image} alt={detalle.title} />
           {/* <input
@@ -97,7 +95,7 @@ export const ProductosDetalles = () => {
           </div>
         </div>
       }
-      <h2 className="relacionados">Productos relacionados</h2>
+      <h2 className="relacionados">related products</h2>
       <br></br>
       <br></br>
       <div className="productos">

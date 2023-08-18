@@ -30,13 +30,13 @@ export const Header = () => {
         {/* Agrega una lista de navegación */}
         <ul>
           <li>
-            <Link to="/">INICIO</Link>
+            <Link to="/">HOME</Link>
           </li>
           <li>
-            <Link to="/productos">PRODUCTOS</Link>
+            <Link to="/productos">PRODUCTS</Link>
           </li>
           <li>
-            <Link to="/agregarproducto">AGREGAR</Link>
+            <Link to="/agregarproducto">ADD PRODUCTS</Link>
           </li>
         </ul>
       </nav>

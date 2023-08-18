@@ -8,17 +8,20 @@ export default function Inicio() {
         <h1>home</h1>
       </Link> */}
       <Link to="/productos">
-        <h1>Productos</h1>
+        <h1>Products</h1>
       </Link>
       <img
         src={
-          "https://assets.designhill.com/design-blog/wp-content/uploads/2016/04/6-min.jpg"
+          "https://images.squarespace-cdn.com/content/v1/5e62cbf3daf9e45668fae6f0/1586199684548-T1XPYLITQ9EXU7RNV75J/BannerAnimation3.gif?format=2500w"
         }
         alt=""
       />
-      <h1> - Bienvenidos a Nike Store - </h1>
-      <img src={"https://turbologo.com/articles/wp-content/uploads/2019/02/nike-4.png"}></img>
-
+      <h1> www.nikestore.com </h1>
+      <img
+        src={
+          "https://turbologo.com/articles/wp-content/uploads/2019/02/nike-4.png"
+        }
+      ></img>
     </div>
   );
 }

@@ -23,6 +23,12 @@ code {
   background-color: rgb(247, 247, 247);
   /* background-image: url(https://wallpaperaccess.com/full/135857.jpg); */
 }
+
+.footer{
+  background-color: #252525;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.74);
+}
 /*-----------------INICIO-------------------*/
 .inicio {
   width: 100%;
@@ -148,7 +154,7 @@ header ul li a {
 /*----------- PRODUCTOS ------------*/
 .produ {
   font-size: 2.4rem;
-  padding: 10rem 0 0 0;
+  padding: 2rem 0 0 0;
   color: #3b3939;
   text-align: center;
 }
@@ -260,7 +266,7 @@ header ul li a {
   border-radius: 8px;
   overflow-x: scroll;
   transition: all 300ms ease-in-out;
-  background-color: rgb(255, 255, 255);
+  background: linear-gradient(#ffffff, #ffffff, #009f56);
   opacity: 0;
   visibility: hidden;
 }

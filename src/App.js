@@ -15,7 +15,6 @@ function App() {
           "https://cdn.shopify.com/s/files/1/1880/7069/files/Nike-Banner-March2023.png?v=1680121865"
         }
         alt=""
-       
       />
       <DataProvider>
         <div className="App">
@@ -34,6 +33,9 @@ function App() {
         alt=""
         width="300"
       />
+      <footer className="footer">
+        <h1>© 2023 Copyright: KADIR RAMIREZ FWD</h1>
+      </footer>
     </>
   );
 }
