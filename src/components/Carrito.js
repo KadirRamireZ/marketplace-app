@@ -45,57 +45,64 @@ export const Carrito = () => {
   const show2 = menu ? "carrito show" : "carrito";
 
   return (
-    <div className={show1}>
-      <div className={show2}>
-        <div onClick={tooglefalse} className="carrito__close">
-          <box-icon name="x"></box-icon>
-        </div>
-        <h2>shopping cart</h2>
-        <div className="carrito__center">
-          {carrito.length === 0 ? (
-            <h2 style={{ textAlign: "center", fontSize: "3rem" }}>
-              empty cart
-            </h2>
-          ) : (
-            <>
-              {carrito.map((producto) => (
-                <div className="carrito__item" key={producto.id}>
-                  <img src={producto.image} alt={producto.title} />
-                  <div>
-                    <h3> {producto.title} </h3>
-                    <p className="price">${producto.price}</p>
+    <>
+      <div className={show1}>
+        <div className={show2}>
+          <div onClick={tooglefalse} className="carrito__close">
+            <box-icon name="x"></box-icon>
+          </div>
+          <h2>shopping cart</h2>
+          <div className="carrito__center">
+            {carrito.length === 0 ? (
+              <h2 style={{ textAlign: "center", fontSize: "3rem" }}>
+                empty cart
+              </h2>
+            ) : (
+              <>
+                {carrito.map((producto) => (
+                  <div className="carrito__item" key={producto.id}>
+                    <img src={producto.image} alt={producto.title} />
+                    <div>
+                      <h3> {producto.title} </h3>
+                      <p className="price">${producto.price}</p>
+                    </div>
+                    <div>
+                      <box-icon
+                        onClick={() => increase(producto.id)}
+                        name="up-arrow"
+                        type="solid"
+                      />
+                      <p className="cantidad">{producto.cantidad}</p>
+                      <box-icon
+                        onClick={() => reduce(producto.id)}
+                        name="down-arrow"
+                        type="solid"
+                      />
+                    </div>
+                    <div
+                      onClick={() => removeProducto(producto.id)}
+                      className="remove__item"
+                    >
+                      <box-icon name="trash" />
+                    </div>
                   </div>
-                  <div>
-                    <box-icon
-                      onClick={() => increase(producto.id)}
-                      name="up-arrow"
-                      type="solid"
-                    />
-                    <p className="cantidad">{producto.cantidad}</p>
-                    <box-icon
-                      onClick={() => reduce(producto.id)}
-                      name="down-arrow"
-                      type="solid"
-                    />
-                  </div>
-                  <div
-                    onClick={() => removeProducto(producto.id)}
-                    className="remove__item"
-                  >
-                    <box-icon name="trash" />
-                  </div>
-                </div>
-              ))}
-              ;
-            </>
-          )}
-        </div>
+                ))}
+              </>
+            )}
+          </div>
 
-        <div className="carrito__footer">
-          <h3>Total: ${total}</h3>
-          <button className="btn">Payment</button>
+          <div className="carrito__footer">
+            <h3>Total: ${total}</h3>
+            <button className="btn">Checkout</button>
+          </div>
+
+          <footer className="footer">
+            <p>
+              &copy; {new Date().getFullYear()} Copyright: KADIR RAMIREZ FWD
+            </p>
+          </footer>
         </div>
       </div>
-    </div>
+    </>
   );
 };

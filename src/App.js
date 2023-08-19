@@ -34,7 +34,7 @@ function App() {
         width="300"
       />
       <footer className="footer">
-        <h1>© 2023 Copyright: KADIR RAMIREZ FWD</h1>
+        <p>&copy; {new Date().getFullYear()} Copyright: KADIR RAMIREZ FWD</p>
       </footer>
     </>
   );
